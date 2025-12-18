@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAW BAW</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo header__logo-big">
+                <a href="index.html"><img src="./images/header-logo.png" alt="LOGO"></a>
+            </h1>
+            <h1 class="header__logo header__logo-small">
+                <a href="index.html"><img src="./images/header-logo-small.png" alt="LOGO"></a>
+            </h1>
+
+            <!-- Hamburger Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="gnav" id="gnav">
+                <ul class="gnav__list">
+                    <li class="gnav__item "><a href="index.html">ホーム</a></li>
+                    <li class="gnav__item"><a href="index.html#about">私たちについて</a></li>
+                    <li class="gnav__item item-active"><a class="gnav__active" href="index.html#menu">お品書き</a></li>
+                    <li class="gnav__item"><a href="index.html#voice">お客様の声</a></li>
+                    <li class="gnav__item"><a href="index.html#news">お知らせ</a></li>
+                    <li class="gnav__item"><a href="index.html#information">店舗情報</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="menu__main">
+        <section class="menu__mainvisual">
+            <div class="menu__mainvisual__inner">
+                <h3 class="menu__title menu-page-title">お品書き</h3>
+            </div>
+        </section>
+
+        <div class="body-background">
+            <img src="./images/body-background01.png" alt="body-background" class="body-background-pic01">
+            <img src="./images/bodybackground02.png" alt="body-background" class="body-background-pic02">
+
+            <section class="icon">
+                <div class="icon__inner">
+                    <div class="icon__grid">
+                        <div class="icon-item">
+                            <a href="#popular">
+                                <div class="icon-circle">
+                                    <img src="./images/popular-food-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">人気</p>
+                                <p class="icon-label-en">popular</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#lunch">
+                                <div class="icon-circle">
+                                    <img src="./images/lunch-set-icon 15.29.53.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">ランチセット</p>
+                                <p class="icon-label-en">lunch-set</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#drinks">
+                                <div class="icon-circle">
+                                    <img src="./images/drink-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">ドリンク</p>
+                                <p class="icon-label-en">drinks</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#salad">
+                                <div class="icon-circle">
+                                    <img src="./images/salad-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">サラダ</p>
+                                <p class="icon-label-en">salad</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#ramen">
+                                <div class="icon-circle">
+                                    <img src="./images/ramen-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">ラーメン</p>
+                                <p class="icon-label-en">remen</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#fries">
+                                <div class="icon-circle">
+                                    <img src="./images/fries-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">揚げ物</p>
+                                <p class="icon-label-en">fries</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#dessert">
+                                <div class="icon-circle">
+                                    <img src="./images/dessert-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">デザート</p>
+                                <p class="icon-label-en">dessert</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#soup">
+                                <div class="icon-circle">
+                                    <img src="./images/soup-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">スープ</p>
+                                <p class="icon-label-en">soup</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="#grilled">
+                                <div class="icon-circle">
+                                    <img src="./images/grilled-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">焼き物</p>
+                                <p class="icon-label-en">grilled</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="popular">
+                <div class="popular__inner">
+                    <h3 class="popular__title " id="popular">
+                        <div class="icon-circle">
+                            <img src="./images/popular-food-icon.png" alt="">
+                        </div>
+                        <p class="icon-label-jp">人気</p>
+                        <p class="icon-label-en">popular</p>
+                    </h3>
+                    <p class="popular__mark mark">お客様に人気の料理、迷ったらこちらがおすすめ。</p>
+                    <div class="popular__items">
+                        <div class="popular__post post">
+                            <img src="./images/moh-hin-gar.png" alt="moh-hin-gar" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">モヒンガー</dt>
+                                <dd class="post__text">¥980</dd>
+                            </dl>
+                        </div>
+                        <div class="popular__post post">
+                            <img src="./images/shan-noodle.png" alt="shan-noodle" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">シャンカウスエ</dt>
+                                <dd class="post__text">¥980</dd>
+                            </dl>
+                        </div>
+                        <div class="popular__post post">
+                            <img src="./images/dan-pauk.png" alt="dan-pauk" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">ビリヤニ</dt>
+                                <dd class="post__text">¥1100</dd>
+                            </dl>
+                        </div>
+                        <div class="popular__post post">
+                            <img src="./images/kyay-oh.png" alt="kyay-oh" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">チェーオーシーチェッ</dt>
+                                <dd class="post__text">¥1100</dd>
+                            </dl>
+                        </div>
+                        <div class="popular__post post">
+                            <img src="./images/coconut-ramen.png" alt="coconut-ramen" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">ココナッツミルクラーメン</dt>
+                                <dd class="post__text">¥1100</dd>
+                            </dl>
+                        </div>
+                        <div class="popular__post post">
+                            <img src="./images/soup03.png" alt="pork-ribs" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">スパイシー豚リブスープ</dt>
+                                <dd class="post__text">¥1200</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+            </section>
+            <section class="lunch">
+                <div class="lunch__inner">
+                    <img src="./images/lunch-background.png" alt="lunch-pic" class="lunch__pic">
+                    <h3 class="lunch__title " id="lunch">
+                        <div class="icon-circle">
+                            <img src="./images/lunch-set-icon 15.29.53.png" alt="lunch-icon">
+                        </div>
+                        <p class="icon-label-jp">ランチセット</p>
+                        <p class="icon-label-en">lunch-set</p>
+                    </h3>
+                    <p class="lunch__mark mark">月曜〜金曜の11時から15時までのランチセット</p>
+                    <div class="lunch__items">
+                        <div class="lunch__post post">
+                            <img src="./images/moh-hin-gar.png" alt="moh-hin-gar" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">モヒンガー</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/shan-noodle.png" alt="shan-noodle" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">シャンカウスエ</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/dan-pauk.png" alt="dan-pauk" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">ビリヤニ</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/kyay-oh.png" alt="kyay-oh" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">チェーオーシーチェッ</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/coconut-ramen.png" alt="coconut-ramen" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">ココナッツミルクラーメン</dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <p class="lunch__price">
+                        上記より1品＋ライス＋ポークカレー<br>
+                        <strong>1,100円（税込）</strong>
+                    </p>
+                    <small>※すべて税込み表記です</small>
+                </div>
+            </section>
+            <section class="drink">
+                <div class="drink__inner">
+                    <h3 class="drink__title " id="drinks">
+                        <div class="icon-circle">
+                            <img src="./images/drink-icon.png" alt="">
+                        </div>
+                        <p class="icon-label-jp">ドリンク</p>
+                        <p class="icon-label-en">drinks</p>
+                    </h3>
+                    <p class="drink__mark mark">飲み放題(120分):2500円</p>
+                    <div class="drink__post">
+                        <div class="drink__post__item">
+                            <p><strong>アルコール</strong></p>
+                            <ul class="drink__list">
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">ビールタワー(2L)</span>
+                                    <span class="menu-list__price">¥2500</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Tiger ビール</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Kirin ビール</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Heineken ビール</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Asahi ビール</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">ワイン</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drink__post__item">
+                            <p><strong>ソフトドリンク</strong></p>
+                            <ul class="drink__list">
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Coca-Cola</span>
+                                    <span class="menu-list__price">¥250</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Pepsi</span>
+                                    <span class="menu-list__price">¥250</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Orange-Juice</span>
+                                    <span class="menu-list__price">¥400</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Mango-Juice</span>
+                                    <span class="menu-list__price">¥400</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Kiwi-Juice</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="drink__list__item">
+                                    <span class="menu-list__name">Lime-Juice</span>
+                                    <span class="menu-list__price">¥400</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="drink__pic picture">
+                        <img src="./images/drink01.png" alt="drink-pic" class="picture__item">
+                        <img src="./images/drink02.png" alt="drink-pic" class="picture__item">
+                        <img src="./images/drink03.png" alt="drink-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+            </section>
+            <section class="salad">
+                <div class="salad__inner">
+                    <h3 class="salad__title" id="salad">
+                        <div class="icon-circle">
+                            <img src="./images/salad-icon.png" alt="salad-icon">
+                        </div>
+                        <p class="icon-label-jp">サラダ</p>
+                        <p class="icon-label-en">salad</p>
+                    </h3>
+                    <p class="salad__mark mark">ミャンマーの定番サラダ</p>
+                    <div class="salad__post">
+                        <div class="salad__post__item">
+                            <ul class="salad__list">
+                                <li class="salad__list__item">
+                                    <span class="menu-list__name">ラペットゥッ　(お茶の葉サラダ)</span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
+                                <li class="salad__list__item">
+                                    <span class="menu-list__name">ナンジートゥッ　(うどんサラダ)</span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
+                                <li class="salad__list__item">
+                                    <span class="menu-list__name">ナンジートゥッ</span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="salad__post__item">
+                            <ul class="salad__list">
+                                <li class="salad__list__item">
+                                    <span class="menu-list__name">ビータンエッグサラダ</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="salad__list__item">
+                                    <span class="menu-list__name">シーフード刺身サラダ</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="salad__list__item">
+                                    <span class="menu-list__name">鶏ももサラダ</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="salad__pic picture">
+                        <img src="./images/salad01.png" alt="salad-pic" class="picture__item">
+                        <img src="./images/salad02.png" alt="salad-pic" class="picture__item">
+                        <img src="./images/salad03.png" alt="salad-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+
+            </section>
+            <section class="ramen">
+                <div class="ramen__inner">
+                    <h3 class="ramen__title" id="ramen">
+                        <div class="icon-circle">
+                            <img src="./images/ramen-icon.png" alt="ramen-icon">
+                        </div>
+                        <p class="icon-label-jp">ラーメン</p>
+                        <p class="icon-label-en">ramen</p>
+                    </h3>
+                    <p class="ramen__mark mark">ミャンマー伝統の麺料理</p>
+                    <div class="ramen__post">
+                        <div class="ramen__post__item">
+                            <ul class="ramen__list">
+                                <li class="ramen__list__item">
+                                    <span class="menu-list__name">チェーオーシーチェッ</span>
+                                    <span class="menu-list__price">¥1100</span>
+                                </li>
+                                <li class="ramen__list__item">
+                                    <span class="menu-list__name">オンノーカウスエ</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ramen__post__item">
+                            <ul class="ramen__list">
+                                <li class="ramen__list__item">
+                                    <span class="menu-list__name">モヒンガー</span>
+                                    <span class="menu-list__price">¥950</span>
+                                </li>
+                                <li class="ramen__list__item">
+                                    <span class="menu-list__name">シャンカウスエ</span>
+                                    <span class="menu-list__price">¥950</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ramen__pic picture">
+                        <img src="./images/ramen01.png" alt="ramen-pic" class="picture__item">
+                        <img src="./images/ramen02.png" alt="ramen-pic" class="picture__item">
+                        <img src="./images/ramen03.png" alt="ramen-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+
+            </section>
+            <section class="fries">
+                <div class="fries__inner">
+                    <h3 class="fries__title" id="fries">
+                        <div class="icon-circle">
+                            <img src="./images/fries-icon.png" alt="fries-icon">
+                        </div>
+                        <p class="icon-label-jp">揚げ物</p>
+                        <p class="icon-label-en">fries</p>
+                    </h3>
+                    <p class="fries__mark mark">サクサク食感の揚げ物</p>
+                    <div class="fries__post">
+                        <div class="fries__post__item">
+                            <ul class="fries__list">
+                                <li class="fries__list__item">
+                                    <span class="menu-list__name">フライドチキン
+                                    </span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="fries__post__item">
+                            <ul class="fries__list">
+                                <li class="fries__list__item">
+                                    <span class="menu-list__name">ライドチキンの皮</span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fries__pic picture">
+                        <img src="./images/fries01.png" alt="salad-pic" class="picture__item">
+                        <img src="./images/fries02.png" alt="salad-pic" class="picture__item">
+                        <img src="./images/fries03.png" alt="salad-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+
+            </section>
+            <section class="dessert">
+                <div class="dessert__inner">
+                    <h3 class="dessert__title" id="dessert">
+                        <div class="icon-circle">
+                            <img src="./images/dessert-icon.png" alt="dessert">
+                        </div>
+                        <p class="icon-label-jp">デザート</p>
+                        <p class="icon-label-en">dessert</p>
+                    </h3>
+                    <p class="dessert__mark mark">食後にぴったりの甘いデザート</p>
+                    <div class="dessert__post">
+                        <div class="dessert__post__item">
+                            <ul class="dessert__list">
+                                <li class="dessert__list__item">
+                                    <span class="menu-list__name">バナナケーキ(ビルマ風)</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                                <li class="dessert__list__item">
+                                    <span class="menu-list__name">甘いミルクデザート</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dessert__post__item">
+                            <ul class="dessert__list">
+                                <li class="dessert__list__item">
+                                    <span class="menu-list__name">ココナッツミルクゼリー</span>
+                                    <span class="menu-list__price">¥600</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dessert__pic picture">
+                        <img src="./images/dessert01.png" alt="dessert-pic" class="picture__item">
+                        <img src="./images/dessert02.png" alt="dessert-pic" class="picture__item">
+                        <img src="./images/dessert03.png" alt="dessert-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+
+            </section>
+            <section class="soup">
+                <div class="soup__inner">
+                    <h3 class="soup__title" id="soup">
+                        <div class="icon-circle">
+                            <img src="./images/soup-icon.png" alt="soup-icon">
+                        </div>
+                        <p class="icon-label-jp">スープ</p>
+                        <p class="icon-label-en">soup</p>
+                    </h3>
+                    <p class="soup__mark mark">体が温まるミャンマーのスープ</p>
+                    <div class="soup__post">
+                        <div class="soup__post__item">
+                            <ul class="soup__list">
+                                <li class="soup__list__item">
+                                    <span class="menu-list__name">スパイシー豚リブスープ</span>
+                                    <span class="menu-list__price">¥1200</span>
+                                </li>
+                                <li class="soup__list__item">
+                                    <span class="menu-list__name">スパイシ魚スープ</span>
+                                    <span class="menu-list__price">¥1200</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="soup__post__item">
+                            <ul class="dessert__list">
+                                <li class="dessert__list__item">
+                                    <span class="menu-list__name">豚肉と筍スープ</span>
+                                    <span class="menu-list__price">¥1100</span>
+                                </li>
+                                <li class="soup__list__item">
+                                    <span class="menu-list__name">エビスープ</span>
+                                    <span class="menu-list__price">¥1100</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="soup__pic picture">
+                        <img src="./images/soup01.png" alt="soup-pic" class="picture__item">
+                        <img src="./images/soup02.png" alt="soup-pic" class="picture__item">
+                        <img src="./images/soup03.png" alt="soup-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+
+            </section>
+            <section class="grilled">
+                <div class="grilled__inner">
+                    <h3 class="grilled__title" id="grilled">
+                        <div class="icon-circle">
+                            <img src="./images/grilled-icon.png" alt="grilled-icon">
+                        </div>
+                        <p class="icon-label-jp">焼き物</p>
+                        <p class="icon-label-en">grilled</p>
+                    </h3>
+                    <p class="grilled__mark mark">お酒に合うグリルメニュー</p>
+                    <div class="grilled__post">
+                        <div class="grilled__post__item">
+                            <ul class="grilled__list">
+                                <li class="grilled__list__item">
+                                    <span class="menu-list__name">魚グリル</span>
+                                    <span class="menu-list__price">¥1500</span>
+                                </li>
+                                <li class="grilled__list__item">
+                                    <span class="menu-list__name">チキングリル</span>
+                                    <span class="menu-list__price">¥800</span>
+                                </li>
+                                <li class="grilled__list__item">
+                                    <span class="menu-list__name">牛レバーグリル</span>
+                                    <span class="menu-list__price">¥800</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grilled__post__item">
+                            <ul class="grilled__list">
+                                <li class="grilled__list__item">
+                                    <span class="menu-list__name">野菜グリル</span>
+                                    <span class="menu-list__price">¥800</span>
+                                </li>
+                                <li class="grilled__list__item">
+                                    <span class="menu-list__name">豚グリル</span>
+                                    <span class="menu-list__price">¥800</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grilled__pic picture">
+                        <img src="./images/grilled01.png" alt="grilled-pic" class="picture__item">
+                        <img src="./images/grilled02.png" alt="grilled-pic" class="picture__item">
+                        <img src="./images/grilled03.png" alt="grilled-pic" class="picture__item">
+                    </div>
+                    <small>※すべて税込み表記です</small>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <h1 class="footer__logo footer__logo-big"><a href="./index.html"><img
+                        src="./images/header-logo-white.png"></a>
+            </h1>
+            <h1 class="footer__logo footer__logo-small"><a href="./index.html"><img
+                        src="./images/header-logo-small-white.png"></a></h1>
+            <div class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item "><a href="index.html">Home</a></li>
+                    <li class="footer__nav-item"><a href="">About us</a></li>
+                    <li class="footer__nav-item item-active"><a href="#menu">Menu</a></li>
+                    <li class="footer__nav-item"><a href="#voice">Customer's voice</a></li>
+                    <li class="footer__nav-item"><a href="#news">News</a></li>
+                </ul>
+            </div>
+            <div class="footer__sns">
+                <a href="https://www.instagram.com/baw_baw_izakaya/" class="footer__sns-icon instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/p/Baw-Baw-100075854921593/" class="footer__sns-icon facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="footer__sns-icon youtube"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <small class="footer__copy">&copy; 2025 BAW BAW. All Rights Reserved.</small>
+
+        </div>
+
+
+    </footer>
+
+</body>
+<script src="./script.js"></script>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAW BAW</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo header__logo-big">
+                <a href="index.html"><img src="./images/header-logo.png" alt="LOGO"></a>
+            </h1>
+            <h1 class="header__logo header__logo-small">
+                <a href="index.html"><img src="./images/header-logo-small.png" alt="LOGO"></a>
+            </h1>
+
+            <!-- Hamburger Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="gnav" id="gnav">
+                <ul class="gnav__list">
+                    <li class="gnav__item item-active"><a class="gnav__active" href="index.html">ホーム</a></li>
+                    <li class="gnav__item"><a href="#about">私たちについて</a></li>
+                    <li class="gnav__item"><a href="#menu">お品書き</a></li>
+                    <li class="gnav__item"><a href="#voice">お客様の声</a></li>
+                    <li class="gnav__item"><a href="#news">お知らせ</a></li>
+                    <li class="gnav__item"><a href="#information">店舗情報</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="mainvisual">
+            <div class="mainvisual__inner">
+                <picture class="mainvisual__pic">
+                    <source media="(width >= 640px)" srcset="./images/logo-big.png">
+                    <source media="(width < 640px)" srcset="./images/logo-small.png">
+                    <img src="./images/logo-big.png" alt="">
+                </picture>
+                <p class="mainvisual__text">今日も一日おつかれさま。
+                    異国の味とあたたかい笑顔で、ほっとひと息。</p>
+            </div>
+        </section>
+        <div class="background"></div>
+        <section class="about animate-target anim-about" id="about">
+            <div class="about__inner">
+                <div class="about__items">
+                    <div class="about__content">
+                        <h3 class="about__title">私たちについて</h3>
+                        <p class="about__text">BAW BAW（バウバウ）は、名古屋・泉にある<br>ミャンマー家庭料理の居酒屋です。
+                            本場の味を大切にしつつ、日本のお客様にも食べやすいアレンジで料理をご提供しています。<br>
+                            「BAW BAW」には“ゆっくりくつろぐ”という意味があり、<br>初めての方でも安心して楽しんで<br>いただける温かいお店です。</p>
+                    </div>
+                    <div class="about__images">
+                        <div class="about__image about__image--item01"><img src="./images/about-image01.png"
+                                alt="about-image"></div>
+                        <div class="about__image about__image--item02"><img src="./images/about-image02.png"
+                                alt="about-image"></div>
+                        <div class="about__image about__iamge--item03"><img src="./images/about-image03.png"
+                                alt="about-image"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu animate-target anim-menu" id="menu">
+            <div class="menu__inner">
+                <div class="menu__items">
+                    <div class="menu__content">
+                        <h3 class="menu__title">お品書き</h3>
+                        <p class="menu__text">本場ミャンマーの家庭料理を、やさしい味付けで気軽に楽しめます。ランチもディナーも、人気メニューを取りそろえています。</p>
+                        <a href="./menu.html" class="btn"> view more</a>
+                    </div>
+                    <div class="menu__pic">
+                        <img src="./images/menu-image.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="voice animate-target anim-voice" id="voice">
+
+            <div class="voice__inner">
+                <h3 class="voice__title">お客様の声</h3>
+                <div class="voice__list">
+                    <div class="voice__item card">
+                        <div class="customer">
+                            <img src="./images/person-boy-svgrepo-com.svg" alt="" class="customer__image">
+                            <dl class="customer__profile">
+                                <dt class="customer__name">Kaung Chitthel
+                                </dt>
+                                <dd class="customer__detail">★★★★★</dd>
+                            </dl>
+                        </div>
+                        <div class="card__content">
+                            <p>とても美味しい料理と素敵なダイニングルームでした。
+                                ミャンマーの伝統料理をぜひ味わってみてください。
+                                5つ星評価にふさわしい素晴らしいサービスでした。</p>
+                        </div>
+                    </div>
+                    <div class="voice__item card">
+                        <div class="customer">
+                            <img src="./images/person-girl-svgrepo-com (1).svg" alt="" class="customer__image">
+                            <dl class="customer__profile">
+                                <dt class="customer__name">Shoon Lai Shwe</dt>
+                                <dd class="customer__detail">★★★★★</dd>
+                            </dl>
+                        </div>
+                        <div class="card__content">
+                            <p>サービスも素晴らしく、待ち時間が長くなりそうな場合は別の支店まで車で送ってくれます。オーナーは名古屋の隠れた名店ジャムなど、名古屋のことを詳しく教えてくれますし、料理も美味しいです。本当におすすめです。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="voice__item card">
+                        <div class="customer">
+                            <img src="./images/person-girl-svgrepo-com (1).svg" alt="" class="customer__image">
+                            <dl class="customer__profile">
+                                <dt class="customer__name">Amelia</dt>
+                                <dd class="customer__detail">★★★★☆</dd>
+                            </dl>
+                        </div>
+                        <div class="card__content">
+                            <p>料理は本当に私の好みに合いました。ポークリブ・ボルケーノはぜひお試しください。装飾と料理はミャンマー文化を反映しています</p>
+                        </div>
+                    </div>
+                    <div class="voice__item card">
+                        <div class="customer">
+                            <img src="./images/person-boy-svgrepo-com.svg" alt="" class="customer__image">
+                            <dl class="customer__profile">
+                                <dt class="customer__name">Thar Htet</dt>
+                                <dd class="customer__detail">★★★★★</dd>
+                            </dl>
+                        </div>
+                        <div class="card__content">
+                            <p>先週行って、本当に美味しかったです。色々な料理を注文したが、どれも本当に美味しかったです。（ポークスティックとシンハービール、ポークリブのボルケーノ＝最高の組み合わせ）その後、ビリヤニもいただきました。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="news" id="news">
+            <div class="news__background"></div>
+            <div class="news__inner">
+                <h3 class="news__title">お知らせ</h3>
+                <ul class="news__list">
+
+                    <li class="news__item">
+                        <span class="news__date">2025.12.20</span>
+                        <p class="news__text">秋の祝日は休まず営業いたします。</p>
+                    </li>
+                    <li class="news__item">
+                        <span class="news__date">2025.12.08</span>
+                        <p class="news__text">ホームページを公開しました。</p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="information" id="information">
+
+            <div class="information__inner">
+                <h3 class="information__title">店舗情報</h3>
+                <div class="information__list">
+                    <!-- 場所 -->
+                    <div class="information__item item">
+                        <h4 class="item__title">場所</h4>
+                        <div class="item__content">
+                            <p class="item__text">〒460-0001 愛知県名古屋市東区泉2丁目13-19<br>ライオンズマンション</p>
+                            <p class="item__text">地下鉄 桜通線「高岳駅」1番出口より徒歩3分</p>
+                        </div>
+                    </div>
+                    <!-- 電話 -->
+                    <div class="information__item item">
+                        <h4 class="item__title">電話</h4>
+                        <div class="item__content">
+                            <p class="item__text"><a href="tel:0528900333">TEL:0528900333</a></p>
+                            <p class="item__text">対応時間:11:00〜23:00</p>
+                        </div>
+                    </div>
+                    <!-- 営業時間 -->
+                    <div class="information__item item">
+                        <h4 class="item__title">営業時間</h4>
+                        <div class="item__content">
+                            <div class="item__days">
+                                <span class="item__day">平日</span>
+                                <div class="item__text">
+                                    <p>11:00〜14:00/17:00〜23:00</p>
+                                </div>
+                            </div>
+                            <div class="item__days">
+                                <span class="item__day">土日</span>
+                                <div class="item__text">
+                                    <p>11:00〜23:00</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.2105972819!2d136.91196807556136!3d35.176303257546216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371e4b2d69d89%3A0x40a7e032ee6c0f03!2zQkFXIEJBVyDlsYXphZLlsYs!5e0!3m2!1sen!2sjp!4v1765108790714!5m2!1sen!2sjp"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <h1 class="footer__logo footer__logo-big"><a href="index.html"><img
+                        src="./images/header-logo-white.png"></a></h1>
+            <h1 class="footer__logo footer__logo-small"><a href="index.html"><img
+                        src="./images/header-logo-small-white.png"></a></h1>
+            <div class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item item-active"><a href="top.html">Home</a></li>
+                    <li class="footer__nav-item"><a href="#about">About us</a></li>
+                    <li class="footer__nav-item"><a href="#menu">Menu</a></li>
+                    <li class="footer__nav-item"><a href="#voice">Customer's voice</a></li>
+                    <li class="footer__nav-item"><a href="#news">News</a></li>
+                </ul>
+            </div>
+            <div class="footer__sns">
+                <a href="https://www.instagram.com/baw_baw_izakaya/" class="footer__sns-icon instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/p/Baw-Baw-100075854921593/" class="footer__sns-icon facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@february_kitchen/video/7578131088850095380"
+                    class="footer__sns-icon youtube"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <small class="footer__copy">&copy; 2025 BAW BAW. All Rights Reserved.</small>
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+<script src="./script.js"></script>
+
+</html>

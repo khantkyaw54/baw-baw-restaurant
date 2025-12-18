@@ -1,0 +1,1461 @@
+@use "sass:math";
+
+// =================================================================
+//  Variables
+// =================================================================
+
+// --- Spacing ---
+$space-xs: 0.25rem; // 4px
+$space-s: 0.5rem; // 8px
+$space-m: 1rem; // 16px
+$space-l: 1.5rem; // 24px
+$space-xl: 2rem; // 32px
+$space-xxl: 2.5rem; // 40px
+$space-xxxl: 3rem; // 48px
+
+// --- Colors ---
+$color-text: #000;
+$color-base: #f7f4e5;
+$color-main: #640125;
+$color-accent: #ee7800;
+$color-bg: #f7fcfe;
+
+// --- Typography ---
+$font-size-base: 16;
+$font-family-gothic: "Zen Maru Gothic",
+    sans-serif;
+$font-family-noto: "Noto Sans JP",
+    sans-serif;
+$font-family-poppins: "Poppins",
+    sans-serif;
+$font-family-gloria: "Gloria Hallelujah", sans-serif;
+
+// --- Breakpoints ---
+$breakpoints: (
+    "tablet": 480px,
+    "desktop": 740px
+);
+
+
+// =================================================================
+//  Functions
+// =================================================================
+
+// pxをremに変換する
+// @param {number} $px-value - px値
+// @return {string} - rem値
+@function rem($px-value) {
+    @return #{math.div($px-value, $font-size-base)}rem;
+}
+
+// XDのトラッキング値をemに変換する
+// @param {number} $xd-value - XDのトラッキング値
+// @return {string} - em値
+@function ls($xd-value) {
+    @return #{math.div($xd-value, 1000)}em;
+}
+
+
+// =================================================================
+//  Mixins
+// =================================================================
+
+// メディアクエリ (モバイルファースト)
+// @param {string} $breakpoint - $breakpointsのキー
+@mixin mq($breakpoint: desktop) {
+    @media (width >=map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+//for h3
+@mixin title-main($t) {
+    margin-bottom: rem(80);
+    font-size: rem(32);
+    font-weight: bold;
+    line-height: math.div(54, 32);
+    text-align: center;
+    font-family: $font-family-gothic;
+
+
+    &::before {
+        content: $t;
+        display: block;
+        margin-bottom: $space-xs;
+        font-size: rem(14);
+        font-weight: bold;
+        line-height: math.div(14, 14);
+        text-transform: capitalize;
+        font-family: $font-family-poppins;
+
+    }
+
+
+    &::after {
+        content: "";
+        display: block;
+        margin: $space-xs auto 0;
+        width: rem(200);
+        height: rem(20);
+        background-image: url(../images/title-after-line.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+// インナー幅の指定
+// @param {number} $mw - max-width
+// @param {number} $w  - width
+@mixin inner($mw: 1000px, $w: 86%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+// Icon circle + text under it
+@mixin icon-item($circle-size: 80px) {
+    text-align: center;
+
+    .icon-circle {
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 10px;
+
+        img {
+            width: 55%;
+            height: auto;
+        }
+    }
+
+    .icon-label-jp {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .icon-label-en {
+        font-size: 14px;
+        color: $color-text;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
+
+small {
+    font-size: rem(12);
+    color: $color-text;
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: $color-accent;
+}
+
+
+
+// =================================================================
+//  index
+// =================================================================
+// ----------------
+//common
+//----------------
+html {
+    scroll-behavior: smooth;
+}
+
+.body-background {
+    position: relative;
+    background-color: $color-base;
+
+    overflow: hidden;
+
+    &-pic01 {
+        position: fixed;
+        top: rem(250);
+        right: rem(100);
+
+        width: rem(250);
+        height: auto;
+
+        opacity: 0.2;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    &-pic02 {
+        display: none;
+
+
+        @include mq(desktop) {
+            display: block;
+            position: fixed;
+            top: rem(250);
+            left: rem(100);
+
+            width: rem(200);
+            height: auto;
+
+            opacity: 0.2;
+            z-index: 0;
+            pointer-events: none;
+
+        }
+    }
+}
+
+
+
+body {
+    color: $color-text;
+    font-family: $font-family-noto;
+    font-size: rem(14);
+    line-height: math.div(30, 14);
+    letter-spacing: ls(25);
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+
+}
+
+.btn {
+    font-family: $font-family-poppins;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+    padding: rem(10) 0;
+    text-align: center;
+    background-color: $color-accent;
+    display: block;
+    width: 150px;
+    border-radius: 35px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        opacity: 0.95;
+    }
+
+    @include mq(desktop) {
+        display: inline-block;
+    }
+}
+
+.picture {
+    padding: rem(40) 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(40);
+
+    &__item {
+        max-width: rem(120);
+        max-height: rem(120);
+    }
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $space-l 0;
+    background-color: rgba(#fff, .9);
+    z-index: 999;
+
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-small {
+        display: block;
+
+        @include mq(desktop) {
+            display: none;
+        }
+    }
+
+    &__logo-big {
+        display: none;
+
+        @include mq(desktop) {
+            display: block;
+        }
+    }
+}
+
+
+.gnav {
+
+    /* ===========================
+       MOBILE NAV (default)
+    ============================ */
+    position: fixed;
+    top: 0;
+    right: -110%;
+    width: 70%;
+    height: 100vh;
+    background: $color-base;
+    padding-top: 100px;
+    transition: right 0.35s ease;
+    z-index: 999;
+
+    &.active {
+        right: 0; // slide in
+
+    }
+
+    /* ===========================
+       MOBILE LIST
+    ============================ */
+    &__list {
+        display: block;
+        padding-left: 30px;
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 20px;
+        color: #000;
+        font-weight: bold;
+        position: relative;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-align: center;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        &::before {
+            content: "";
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            display: block;
+            z-index: -1;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            max-width: rem(100);
+            background-color: $color-accent;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::before {
+            transform: scaleY(1);
+        }
+    }
+
+    /* ===========================
+       DESKTOP RESET
+    ============================ */
+    @include mq(desktop) {
+
+        position: static;
+        width: auto;
+        height: auto;
+        right: 0;
+        padding-top: 0;
+        background: transparent;
+
+        &__list {
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: rem(30);
+            padding-left: 0;
+        }
+
+        &__item {
+            display: block;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================================
+   Hamburger Button
+================================ */
+.hamburger {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001; // above nav
+
+    span {
+        display: block;
+        height: 3px;
+        background: #000;
+        border-radius: 3px;
+        transition: 0.3s ease;
+    }
+
+    @include mq(desktop) {
+        display: none; // hide on desktop
+    }
+}
+
+
+// =================================================================
+//mainvisual
+// =================================================================
+.mainvisual {
+    padding: rem(250) 0 rem(180) 0;
+
+    &__inner {
+        @include inner();
+        text-align: center;
+    }
+
+    &__text {
+        color: #fff;
+        font-family: Zen Maru Gothic, sans-serif;
+        font-weight: bold;
+        font-size: rem(18);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        margin-top: rem(20);
+
+        @include mq(desktop) {
+            font-size: rem(24);
+        }
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -999;
+    background: url("../images/main-image.png") no-repeat 20% 20%/cover;
+    filter: blur(2px);
+}
+
+// =================================================================
+// about
+// =================================================================
+.about {
+    padding: rem(180) 0;
+    background-color: $color-base;
+
+    &__title {
+        @include title-main("about us");
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__items {
+        display: grid;
+        row-gap: rem(40);
+
+        @include mq(desktop) {
+            grid-template-columns: 1fr 400px;
+            column-gap: rem(60);
+            container-type: inline-size;
+            align-items: start;
+            line-height: math.div(28, 14);
+        }
+    }
+
+    &__text {
+        text-align: center;
+        line-height: math.div(28, 14);
+
+
+
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(20);
+
+    }
+
+    &__image {
+
+
+        &--item01 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            margin-top: rem(50);
+
+        }
+
+        &--item02 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        &--item03 {
+            grid-column: 2 / 3;
+            grid-row: 2/ 3;
+        }
+    }
+}
+
+// =================================================================
+// menu
+// =================================================================
+.menu {
+    padding: rem(80) 0 rem(210) 0;
+    background-color: $color-base;
+    background-color: $color-main;
+    position: relative;
+
+    @include mq(desktop) {
+        padding-bottom: rem(250)
+    }
+
+    &__title {
+        @include title-main("menu");
+
+        &::after {
+            background-image: url(../images/title-after-line-white.png);
+        }
+    }
+
+    &__inner {
+        @include inner();
+        color: #fff;
+    }
+
+    &__items {
+        display: grid;
+        row-gap: rem(40);
+
+        @include mq(desktop) {
+
+            grid-template-columns: 1fr 450px;
+            column-gap: rem(40);
+        }
+    }
+
+    &__pic {
+        text-align: center;
+
+
+        @include mq(desktop) {
+            margin-top: -100px;
+        }
+    }
+}
+
+// =================================================================
+// voice
+// =================================================================
+.voice {
+    position: relative;
+    padding: rem(180) 0;
+    background-color: $color-base;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background: url(../images/wave.png) no-repeat 20% center/cover;
+        z-index: 10;
+
+        @include mq(tablet) {
+            top: -150px;
+        }
+    }
+
+    &__inner {
+        @include inner();
+        position: relative;
+        z-index: 20;
+    }
+
+
+    &__title {
+        @include title-main("customer's voice");
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(40);
+
+        @include mq(desktop) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: rem(40);
+        }
+    }
+}
+
+/*customer*/
+.customer {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    column-gap: rem(20);
+    margin-bottom: rem(15);
+
+    & dl dd {
+        font-size: 16px;
+        color: $color-accent;
+    }
+
+    & dt {
+        font-weight: bold;
+    }
+}
+
+/*card*/
+.card {
+    background-color: $color-bg;
+    padding: rem(20);
+    border: 1px solid $color-text;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+// =================================================================
+// news
+// =================================================================
+
+.news {
+    padding: rem(180) 0 rem(350) 0;
+    position: relative;
+    color: #FFF;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-main;
+        z-index: -1;
+    }
+
+    &__inner {
+        @include inner();
+
+    }
+
+    &__title {
+        @include title-main("news");
+
+        &::after {
+            background-image: url(../images/title-after-line-white.png);
+        }
+    }
+
+
+
+
+    &__list {
+        display: grid;
+        gap: 20px;
+    }
+
+    &__item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    &__date {
+        display: block;
+        font-weight: bold;
+        color: $color-accent;
+        margin-bottom: 8px;
+        font-size: rem(14);
+    }
+
+    &__text {
+        font-size: rem(14);
+        color: $color-text;
+        line-height: 1.7;
+    }
+
+
+
+}
+
+
+// =================================================================
+// information
+// =================================================================
+
+
+.information {
+    position: relative;
+    padding: rem(180) 0 rem(250) 0;
+    background-color: $color-base;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background: url(../images/wave.png) no-repeat 20% center/cover;
+        z-index: 10;
+
+        @include mq(tablet) {
+            top: -150px;
+        }
+    }
+
+    &__inner {
+        @include inner();
+
+    }
+
+    &__title {
+        @include title-main("information");
+    }
+
+    &__list {
+        display: grid;
+        row-gap: rem(20);
+        text-align: center;
+        margin-bottom: rem(80);
+
+        @include mq(desktop) {
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: rem(40);
+        }
+
+
+    }
+
+}
+
+/*item*/
+.item {
+    &__title {
+        color: $color-accent;
+        font-weight: bold;
+        font-size: rem(18);
+        padding-bottom: rem(20);
+        border-bottom: 1px dotted $color-text;
+        margin-bottom: rem(20);
+
+    }
+
+    &__days {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        column-gap: rem(40);
+    }
+
+
+}
+
+// =================================================================
+// footer
+// =================================================================
+.footer {
+    position: relative;
+    padding: rem(180) 0;
+    background-color: $color-main;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background: url(../images/wave-red.svg) no-repeat 20% center/cover;
+        z-index: 10;
+
+        @include mq(tablet) {
+            top: -150px;
+        }
+    }
+
+    &__inner {
+        @include inner();
+
+    }
+
+    &__logo {
+        text-align: center;
+        margin-bottom: rem(40);
+    }
+
+    &__logo-big {
+        display: none;
+
+
+        @include mq(desktop) {
+            display: block;
+        }
+    }
+
+    &__logo-small {
+        @include mq(desktop) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        text-align: center;
+        margin-bottom: rem(40);
+
+        &-list {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: center;
+            column-gap: rem(20);
+        }
+
+        &-item {
+            color: #fff;
+            display: block;
+
+
+            position: relative;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+
+            &::before {
+                content: "";
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                display: block;
+                z-index: -1;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                max-width: rem(100);
+                background-color: $color-accent;
+                transform: scaleY(0);
+                transform-origin: bottom;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::before {
+                transform: scaleY(1);
+            }
+
+        }
+    }
+
+    &__sns {
+        display: flex;
+        justify-content: center;
+        column-gap: rem(20);
+        font-size: rem(18);
+
+        &-icon {
+            font-size: rem(35);
+            margin: 0 rem(12);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        color: #fff;
+        font-size: rem(12);
+        margin-top: rem(20);
+        display: block;
+        font-weight: bold;
+    }
+}
+
+
+.item-active {
+    color: $color-accent;
+}
+
+.instagram i {
+    color: #E1306C; // Instagram pink
+}
+
+.facebook i {
+    color: #1877F2; // Facebook blue
+}
+
+.youtube i {
+    color: #FFF; // Red
+}
+
+// =================================================================
+// animation
+// =================================================================
+/* -- Base hidden state -- */
+.animate-target {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* -- Active (visible) state -- */
+.animate-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Section Custom Animations ===== */
+
+/* ABOUT — soft fade + slide-up */
+.anim-about {
+    transform: translateY(50px);
+}
+
+/* MENU — slide-in from right with fade */
+.anim-menu {
+    transform: translateX(-40px);
+    transition-duration: 1s;
+}
+
+/* When active */
+.animate-active.anim-menu {
+    transform: translateX(0);
+}
+
+/* VOICE — fade + zoom-in */
+.anim-voice {
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-out,
+        transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.animate-active.anim-voice {
+    transform: scale(1);
+}
+
+/* ===== Voice Card Hover Effect ===== */
+.voice .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voice .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Voice Stagger Animation ===== */
+.voice__item {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.voice__item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+// ================================================================
+// menu.html
+// ================================================================
+.menu-page-title {
+    color: #fff;
+
+    &::after {
+        background-image: url(../images/title-after-line-white.png);
+    }
+}
+
+.menu__mainvisual {
+    padding: rem(250) 0 rem(150) 0;
+    background: url(../images/menu-image.png) no-repeat 20% 20%/cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 998;
+
+    &__inner {
+        @include inner();
+
+    }
+}
+
+// ================================================================
+// icons
+// ================================================================
+.icon {
+    padding: rem(120) 0;
+
+    text-align: center;
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 20px 0;
+
+        @include mq(desktop) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+
+    &-item {
+        @include icon-item(80px);
+    }
+
+    &-item:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        color: $color-accent;
+
+    }
+}
+
+.mark {
+    font-size: rem(18);
+    font-weight: bold;
+    margin-bottom: rem(40);
+    color: $color-accent;
+}
+
+// ================================================================
+// popular
+// ================================================================
+.popular {
+    padding: rem(60) 0;
+    margin-left: rem(50);
+
+    position: relative;
+
+    &__items {
+        display: grid;
+
+        row-gap: rem(40);
+
+        @include mq(desktop) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: rem(25);
+            align-items: center;
+        }
+    }
+
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__post {
+        display: grid;
+        grid-template-columns: rem(135) rem(200);
+        column-gap: rem(25);
+
+        align-items: center;
+        margin-bottom: rem(40);
+    }
+}
+
+// ================================================================
+// lunch
+// ================================================================
+
+.lunch {
+    padding: rem(120) 0;
+    background-color: #fff;
+    border-radius: rem(200) rem(200) 0 0;
+    position: relative;
+
+    &__pic {
+        position: absolute;
+        top: 20%;
+        pointer-events: none;
+        opacity: 0.2;
+        left: 80%;
+        transform: translateX(-50%);
+        width: rem(300);
+        height: auto;
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__items {
+        display: grid;
+
+        row-gap: rem(40);
+
+        @include mq(desktop) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: rem(25);
+            align-items: center;
+        }
+    }
+
+    &__post {
+        display: grid;
+        grid-template-columns: rem(135) rem(200);
+        column-gap: rem(25);
+
+        align-items: center;
+        margin-bottom: rem(40);
+    }
+
+    &__price {
+        text-align: center;
+        color: $color-accent;
+    }
+}
+
+// ================================================================
+// drink
+// ================================================================
+.drink {
+    padding: rem(60) 0;
+
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+
+        &__item:first-child {
+            margin-bottom: rem(60);
+
+            @include mq(desktop) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+strong {
+    font-size: rem(18);
+    font-weight: bold;
+}
+
+// ================================================================
+//salad
+// ================================================================
+.salad {
+    padding: rem(60) 0;
+
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+    }
+}
+
+// ================================================================
+// ramen
+// ================================================================
+.ramen {
+    padding: rem(60) 0;
+
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+    }
+}
+
+// ================================================================
+// fries
+// ================================================================
+.fries {
+    padding: rem(60) 0;
+
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+    }
+}
+
+// ================================================================
+// dessert
+// ================================================================
+.dessert {
+    padding: rem(60) 0;
+
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+    }
+}
+
+// ================================================================
+// soup
+// ================================================================
+.soup {
+    padding: rem(60) 0;
+
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+    }
+}
+
+// ================================================================
+// grilled
+// ================================================================
+.grilled {
+    padding: rem(60) 0 rem(210) 0;
+    position: relative;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include icon-item(80px);
+        margin-bottom: rem(40);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: rem(10) 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__post {
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(80);
+        }
+    }
+}
