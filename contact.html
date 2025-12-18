@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAW BAW</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo header__logo-big">
+                <a href="index.html"><img src="./images/header-logo.png" alt="LOGO"></a>
+            </h1>
+            <h1 class="header__logo header__logo-small">
+                <a href="index.html"><img src="./images/header-logo-small.png" alt="LOGO"></a>
+            </h1>
+
+            <!-- Hamburger Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="gnav" id="gnav">
+                <ul class="gnav__list">
+                    <li class="gnav__item"><a class="gnav__active" href="index.html">ホーム</a></li>
+                    <li class="gnav__item"><a href="#about">私たちについて</a></li>
+                    <li class="gnav__item"><a href="#menu">お品書き</a></li>
+                    <li class="gnav__item"><a href="#voice">お客様の声</a></li>
+                    <li class="gnav__item"><a href="#news">お知らせ</a></li>
+                    <li class="gnav__item"><a href="#information">店舗情報</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main__contact">
+        <section class="contact">
+            <div class="contact__inner">
+
+                <header class="contact__header">
+                    <h2 class="contact__title">お問い合わせ</h2>
+                    <p class="contact__subtitle">
+                        BAW BAWへのご質問・ご予約に関するお問い合わせはこちらからお願いいたします。
+                    </p>
+                </header>
+
+                <div class="contact__content">
+
+                    <!-- FORM -->
+                    <div class="contact__card">
+                        <form>
+                            <div class="contact__field">
+                                <label>お名前<span>必須</span></label>
+                                <input type="text" placeholder="例：山田 太郎" required>
+                            </div>
+
+                            <div class="contact__field">
+                                <label>メールアドレス<span>必須</span></label>
+                                <input type="email" placeholder="example@email.com" required>
+                            </div>
+
+                            <div class="contact__field">
+                                <label>電話番号</label>
+                                <input type="tel" placeholder="090-0000-0000">
+                            </div>
+
+                            <div class="contact__field">
+                                <label>お問い合わせ内容</label>
+                                <textarea placeholder="お問い合わせ内容をご入力ください"></textarea>
+                            </div>
+
+                            <button type="submit" class="contact__btn">
+                                送信する
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- IMAGE -->
+                    <div class="contact__visual">
+                        <img src="./images/contact-image.png" alt="BAW BAW 店舗">
+                        <p class="contact__visual-text">
+                            スタッフ一同、<br>皆さまのご来店を心よりお待ちしております。
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <h1 class="footer__logo footer__logo-big"><a href="index.html"><img
+                        src="./images/header-logo-white.png"></a>
+            </h1>
+            <h1 class="footer__logo footer__logo-small"><a href="index.html"><img
+                        src="./images/header-logo-small-white.png"></a></h1>
+            <div class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="top.html">Home</a></li>
+                    <li class="footer__nav-item"><a href="#about">About us</a></li>
+                    <li class="footer__nav-item"><a href="#menu">Menu</a></li>
+                    <li class="footer__nav-item"><a href="#voice">Customer's voice</a></li>
+                    <li class="footer__nav-item"><a href="#news">News</a></li>
+                </ul>
+            </div>
+            <div class="footer__sns">
+                <a href="https://www.instagram.com/baw_baw_izakaya/" class="footer__sns-icon instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/p/Baw-Baw-100075854921593/" class="footer__sns-icon facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@february_kitchen/video/7578131088850095380"
+                    class="footer__sns-icon youtube"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <small class="footer__copy">&copy; 2025 BAW BAW. All Rights Reserved.</small>
+
+        </div>
+    </footer>
+</body>
+<script src="./script.js"></script>
+
+</html>
