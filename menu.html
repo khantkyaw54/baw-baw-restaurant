@@ -26,12 +26,10 @@
     </div>
     <header class="header">
         <div class="header__inner">
-            <h1 class="header__logo header__logo-big">
+            <h1 class="header__logo">
                 <a href="index.html"><img src="./images/header-logo.png" alt="LOGO"></a>
             </h1>
-            <h1 class="header__logo header__logo-small">
-                <a href="index.html"><img src="./images/header-logo-small.png" alt="LOGO"></a>
-            </h1>
+
 
             <!-- Hamburger Button -->
             <div class="hamburger" id="hamburger">
@@ -68,15 +66,6 @@
                 <div class="icon__inner">
                     <div class="icon__grid">
                         <div class="icon-item">
-                            <a href="#popular">
-                                <div class="icon-circle">
-                                    <img src="./images/popular-food-icon.png" alt="">
-                                </div>
-                                <p class="icon-label-jp">人気</p>
-                                <p class="icon-label-en">popular</p>
-                            </a>
-                        </div>
-                        <div class="icon-item">
                             <a href="#lunch">
                                 <div class="icon-circle">
                                     <img src="./images/lunch-set-icon 15.29.53.png" alt="">
@@ -85,6 +74,16 @@
                                 <p class="icon-label-en">lunch-set</p>
                             </a>
                         </div>
+                        <div class="icon-item">
+                            <a href="#popular">
+                                <div class="icon-circle">
+                                    <img src="./images/popular-food-icon.png" alt="">
+                                </div>
+                                <p class="icon-label-jp">人気</p>
+                                <p class="icon-label-en">popular</p>
+                            </a>
+                        </div>
+
                         <div class="icon-item">
                             <a href="#drinks">
                                 <div class="icon-circle">
@@ -151,6 +150,56 @@
                     </div>
                 </div>
             </section>
+            <section class="lunch">
+                <div class="lunch__inner">
+                    <img src="./images/lunch-background.png" alt="lunch-pic" class="lunch__pic">
+                    <h3 class="lunch__title " id="lunch">
+                        <div class="icon-circle">
+                            <img src="./images/lunch-set-icon 15.29.53.png" alt="lunch-icon">
+                        </div>
+                        <p class="icon-label-jp">ランチセット</p>
+                        <p class="icon-label-en">lunch-set</p>
+                    </h3>
+                    <p class="lunch__mark mark">月曜〜金曜の11時から15時までのランチセット</p>
+                    <div class="lunch__items">
+                        <div class="lunch__post post">
+                            <img src="./images/ramen02.png" alt="moh-hin-gar" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">モヒンガー</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/shan-noodle.png" alt="shan-noodle" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">シャンカウスエ</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/dan-pauk.png" alt="dan-pauk" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">ビリヤニ</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/ramen03.png" alt="kyay-oh" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">チェーオーシーチェッ</dt>
+                            </dl>
+                        </div>
+                        <div class="lunch__post post">
+                            <img src="./images/coconnut-ramen.png" alt="coconut-ramen" class="post__image">
+                            <dl class="post__content">
+                                <dt class="post__title">ココナッツミルクラーメン</dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <p class="lunch__price">
+                        上記より1品＋ライス＋ポークカレー<br>
+                        <strong>1,100円（税込）</strong>
+                    </p>
+                    <small>※すべて税込み表記です</small>
+                </div>
+            </section>
             <section class="popular">
                 <div class="popular__inner">
                     <h3 class="popular__title " id="popular">
@@ -163,7 +212,7 @@
                     <p class="popular__mark mark">お客様に人気の料理、迷ったらこちらがおすすめ。</p>
                     <div class="popular__items">
                         <div class="popular__post post">
-                            <img src="./images/moh-hin-gar.png" alt="moh-hin-gar" class="post__image">
+                            <img src="./images/ramen02.png" alt="moh-hin-gar" class="post__image">
                             <dl class="post__content">
                                 <dt class="post__title">モヒンガー</dt>
                                 <dd class="post__text">¥980</dd>
@@ -184,7 +233,7 @@
                             </dl>
                         </div>
                         <div class="popular__post post">
-                            <img src="./images/kyay-oh.png" alt="kyay-oh" class="post__image">
+                            <img src="./images/ramen03.png" alt="kyay-oh" class="post__image">
                             <dl class="post__content">
                                 <dt class="post__title">チェーオーシーチェッ</dt>
                                 <dd class="post__text">¥1100</dd>
@@ -208,56 +257,7 @@
                     <small>※すべて税込み表記です</small>
                 </div>
             </section>
-            <section class="lunch">
-                <div class="lunch__inner">
-                    <img src="./images/lunch-background.png" alt="lunch-pic" class="lunch__pic">
-                    <h3 class="lunch__title " id="lunch">
-                        <div class="icon-circle">
-                            <img src="./images/lunch-set-icon 15.29.53.png" alt="lunch-icon">
-                        </div>
-                        <p class="icon-label-jp">ランチセット</p>
-                        <p class="icon-label-en">lunch-set</p>
-                    </h3>
-                    <p class="lunch__mark mark">月曜〜金曜の11時から15時までのランチセット</p>
-                    <div class="lunch__items">
-                        <div class="lunch__post post">
-                            <img src="./images/moh-hin-gar.png" alt="moh-hin-gar" class="post__image">
-                            <dl class="post__content">
-                                <dt class="post__title">モヒンガー</dt>
-                            </dl>
-                        </div>
-                        <div class="lunch__post post">
-                            <img src="./images/shan-noodle.png" alt="shan-noodle" class="post__image">
-                            <dl class="post__content">
-                                <dt class="post__title">シャンカウスエ</dt>
-                            </dl>
-                        </div>
-                        <div class="lunch__post post">
-                            <img src="./images/dan-pauk.png" alt="dan-pauk" class="post__image">
-                            <dl class="post__content">
-                                <dt class="post__title">ビリヤニ</dt>
-                            </dl>
-                        </div>
-                        <div class="lunch__post post">
-                            <img src="./images/kyay-oh.png" alt="kyay-oh" class="post__image">
-                            <dl class="post__content">
-                                <dt class="post__title">チェーオーシーチェッ</dt>
-                            </dl>
-                        </div>
-                        <div class="lunch__post post">
-                            <img src="./images/coconnut-ramen.png" alt="coconut-ramen" class="post__image">
-                            <dl class="post__content">
-                                <dt class="post__title">ココナッツミルクラーメン</dt>
-                            </dl>
-                        </div>
-                    </div>
-                    <p class="lunch__price">
-                        上記より1品＋ライス＋ポークカレー<br>
-                        <strong>1,100円（税込）</strong>
-                    </p>
-                    <small>※すべて税込み表記です</small>
-                </div>
-            </section>
+
             <section class="drink">
                 <div class="drink__inner">
                     <h3 class="drink__title " id="drinks">
@@ -427,7 +427,7 @@
                         </div>
                     </div>
                     <div class="ramen__pic picture">
-                        <img src="./images/ramen01.png" alt="ramen-pic" class="picture__item">
+                        <img src="./images/coconnut-ramen.png" alt="ramen-pic" class="picture__item">
                         <img src="./images/ramen02.png" alt="ramen-pic" class="picture__item">
                         <img src="./images/ramen03.png" alt="ramen-pic" class="picture__item">
                     </div>
@@ -453,6 +453,11 @@
                                     </span>
                                     <span class="menu-list__price">¥500</span>
                                 </li>
+                                <li class="fries__list__item">
+                                    <span class="menu-list__name">フライドポテト
+                                    </span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
 
                             </ul>
                         </div>
@@ -460,6 +465,10 @@
                             <ul class="fries__list">
                                 <li class="fries__list__item">
                                     <span class="menu-list__name">ライドチキンの皮</span>
+                                    <span class="menu-list__price">¥500</span>
+                                </li>
+                                <li class="fries__list__item">
+                                    <span class="menu-list__name">野菜天ぷら</span>
                                     <span class="menu-list__price">¥500</span>
                                 </li>
                             </ul>
@@ -633,7 +642,8 @@
                         class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.facebook.com/p/Baw-Baw-100075854921593/" class="footer__sns-icon facebook"><i
                         class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="footer__sns-icon youtube"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.tiktok.com/@bawbaw002" class="footer__sns-icon tiktok"><i
+                        class="fa-brands fa-tiktok"></i></a>
             </div>
             <small class="footer__copy">&copy; 2025 BAW BAW. All Rights Reserved.</small>
 

@@ -30,9 +30,9 @@
             <h1 class="header__logo header__logo-big">
                 <a href="index.html"><img src="./images/header-logo.png" alt="LOGO"></a>
             </h1>
-            <h1 class="header__logo header__logo-small">
+            <!-- <h1 class="header__logo header__logo-small">
                 <a href="index.html"><img src="./images/header-logo-small.png" alt="LOGO"></a>
-            </h1>
+            </h1> -->
 
             <!-- Hamburger Button -->
             <div class="hamburger" id="hamburger">
@@ -56,22 +56,24 @@
     <main class="main">
         <section class="mainvisual">
             <div class="mainvisual__inner">
-                <picture class="mainvisual__pic">
+                <!-- <picture class="mainvisual__pic">
                     <source media="(width >= 640px)" srcset="./images/logo-big.png">
                     <source media="(width < 640px)" srcset="./images/logo-small.png">
-                    <img src="./images/logo-big.png" alt="">
-                </picture>
-                <p class="mainvisual__text">今日も一日おつかれさま。
-                    異国の味とあたたかい笑顔で、ほっとひと息。</p>
+                    <img class="mainvisual__img" src="./images/logo-big.png" alt="">
+                </picture> -->
+                <p class="mainvisual__text"><span class="strong">異国の味、</span><br>ほっとする時間</p>
+                <p class="mainvisual__sub">
+                    Myanmar Izakaya in Nagoya
+                </p>
             </div>
         </section>
         <button id="backToTop">
             <img src="./images/top.png" alt="Back to top">
         </button>
         <div class="background"></div>
-        <section class="about animate-target anim-about" id="about">
+        <section class="about " id="about">
             <div class="about__inner">
-                <div class="about__items">
+                <div class="about__items ">
                     <div class="about__content">
                         <h3 class="about__title">私たちについて</h3>
                         <p class="about__text">BAW BAW（バウバウ）は、名古屋・泉にある<br>ミャンマー家庭料理の居酒屋です。
@@ -104,9 +106,9 @@
                 </div>
             </div>
         </section>
-        <section class="voice animate-target anim-voice" id="voice">
+        <section class="voice " id="voice">
 
-            <div class="voice__inner">
+            <div class="voice__inner animate-target anim-voice">
                 <h3 class="voice__title">お客様の声</h3>
                 <div class="voice__list">
                     <div class="voice__item card">
@@ -142,7 +144,7 @@
                             <img src="./images/person-girl-svgrepo-com (1).svg" alt="" class="customer__image">
                             <dl class="customer__profile">
                                 <dt class="customer__name">Amelia</dt>
-                                <dd class="customer__detail">★★★★☆</dd>
+                                <dd class="customer__detail">★★★★★</dd>
                             </dl>
                         </div>
                         <div class="card__content">
@@ -167,7 +169,7 @@
 
             </div>
         </section>
-        <section class="news" id="news">
+        <section class="news animate-target anim-news" id="news">
             <div class="news__background"></div>
             <div class="news__inner">
                 <h3 class="news__title">お知らせ</h3>
@@ -187,7 +189,7 @@
         </section>
         <section class="information" id="information">
 
-            <div class="information__inner">
+            <div class="information__inner animate-target anim-information">
                 <h3 class="information__title">店舗情報</h3>
                 <div class="information__list">
                     <!-- 場所 -->
@@ -258,7 +260,7 @@
                         class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.facebook.com/p/Baw-Baw-100075854921593/" class="footer__sns-icon facebook"><i
                         class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@february_kitchen/video/7578131088850095380"
+                <a href="https://www.tiktok.com/@bawbaw002"
                     class="footer__sns-icon youtube"><i class="fa-brands fa-tiktok"></i></a>
             </div>
             <small class="footer__copy">&copy; 2025 BAW BAW. All Rights Reserved.</small>

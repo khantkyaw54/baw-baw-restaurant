@@ -1,17 +1,46 @@
+// const hamburger = document.getElementById("hamburger");
+// const gnav = document.getElementById("gnav");
+// const a = document.querySelectorAll("#gnav a");
+
+// a.forEach((link) => {
+//     link.addEventListener("click", () => {
+//         hamburger.classList.remove("active");
+//         gnav.classList.remove("active");
+//     });
+// });
+
+// hamburger.addEventListener("click", () => {
+//     hamburger.classList.toggle("active");
+//     gnav.classList.toggle("active");
+// });
+
 const hamburger = document.getElementById("hamburger");
 const gnav = document.getElementById("gnav");
 const a = document.querySelectorAll("#gnav a");
 
-a.forEach((link) => {
-    link.addEventListener("click", () => {
+// Close menu when a link is clicked
+
+for (let i = 0; i < a.length; i++) {
+    a[i].addEventListener("click", function () {
         hamburger.classList.remove("active");
         gnav.classList.remove("active");
     });
-});
+}
 
-hamburger.addEventListener("click", () => {
+// Toggle menu when hamburger is clicked
+hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent document click from triggering
     hamburger.classList.toggle("active");
     gnav.classList.toggle("active");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+    // check if click is outside hamburger and gnav
+    if (!hamburger.contains(e.target) && !gnav.contains(e.target)) {
+        hamburger.classList.remove("active");
+        gnav.classList.remove("active");
+    }
 });
 
 // Back to Top Buttonß
@@ -36,7 +65,7 @@ backToTop.addEventListener('click', () => {
 
 window.addEventListener('load', function () {
     const loader = document.getElementById('loader');
-    const minTime = 1500; // minimum time in ms (1.5 seconds)
+    const minTime = 1000; // minimum time in ms (1.5 seconds)
     const startTime = performance.now(); // when loader appeared
 
     const hideLoader = () => {
@@ -54,6 +83,16 @@ window.addEventListener('load', function () {
     }
 });
 
+//header bar
+window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("is-scrolled");
+    } else {
+        header.classList.remove("is-scrolled");
+    }
+});
 
 
 
