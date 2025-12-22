@@ -380,7 +380,7 @@ img {
         height: auto;
 
         @include mq(desktop) {
-            width: rem(250);
+            width: rem(180);
         }
     }
 
@@ -1631,9 +1631,6 @@ strong {
 // ================================================================
 // contact
 // ================================================================
-/* =====================
-   Contact (Professional)
-===================== */
 .main__contact {
     padding: 180px 20px;
     background: $color-base;
@@ -1768,6 +1765,4 @@ strong {
         line-height: 1.6;
         font-size: 14px;
     }
-
-    /*responsive*/
 }

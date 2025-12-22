@@ -218,7 +218,7 @@ img {
 }
 @media (width >= 740px) {
   .header__logo {
-    width: 15.625rem;
+    width: 11.25rem;
   }
 }
 
@@ -1679,9 +1679,6 @@ strong {
   }
 }
 
-/* =====================
-   Contact (Professional)
-===================== */
 .main__contact {
   padding: 180px 20px;
   background: #f7f4e5;
@@ -1693,7 +1690,6 @@ strong {
   /* fields */
   /* button */
   /* image */
-  /*responsive*/
 }
 .contact__inner {
   max-width: 1000px;
