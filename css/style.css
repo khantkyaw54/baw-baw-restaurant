@@ -603,6 +603,9 @@ body.no-scroll {
 }
 .menu__pic {
   text-align: center;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 @media (width >= 740px) {
   .menu__pic {

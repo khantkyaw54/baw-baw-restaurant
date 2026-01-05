@@ -774,7 +774,9 @@ body.no-scroll {
 
     &__pic {
         text-align: center;
-
+        width: 100%;
+        height: auto;
+        display: block;
 
         @include mq(desktop) {
             margin-top: -100px;
