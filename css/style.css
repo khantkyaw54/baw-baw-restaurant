@@ -1006,7 +1006,7 @@ body.no-scroll {
 
 .menu__mainvisual {
   padding: 15.625rem 0 9.375rem;
-  background: url(../images/menu-image01.png) no-repeat 40% center/cover;
+  background: url(../images/menu-image01.jpg) no-repeat 40% center/cover;
   background-attachment: scroll;
   position: relative;
   z-index: 998;

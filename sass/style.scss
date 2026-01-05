@@ -28,7 +28,7 @@ $font-family-noto: "Noto Sans JP",
     sans-serif;
 $font-family-poppins: "Poppins",
     sans-serif;
-$font-family-gloria: "Gloria Hallelujah", sans-serif;
+// $font-family-gloria: "Gloria Hallelujah", sans-serif;
 
 // --- Breakpoints ---
 $breakpoints: (
@@ -1160,7 +1160,7 @@ body.no-scroll {
 
 .menu__mainvisual {
     padding: rem(250) 0 rem(150);
-    background: url(../images/menu-image01.png) no-repeat 40% center / cover;
+    background: url(../images/menu-image01.jpg) no-repeat 40% center / cover;
 
 
 
