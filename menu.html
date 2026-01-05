@@ -19,22 +19,19 @@
 
     <title>BAW BAW</title>
 
-    <!-- Google Fonts (optimized) -->
+    <!-- Google Fonts (simple & safe) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS (local, non-render-blocking) -->
-    <link rel="preload" href="./css/style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="./css/style.css">
-    </noscript>
+    <!-- CSS (NORMAL, no tricks) -->
+    <link rel="stylesheet" href="./css/style.css">
 
-    <!-- React (defer so it does NOT block rendering) -->
+    <!-- React (deferred) -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" defer crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer crossorigin></script>
 
-    <!-- Babel (only needed for JSX, deferred) -->
+    <!-- Babel (only if really needed) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
 </head>
 
