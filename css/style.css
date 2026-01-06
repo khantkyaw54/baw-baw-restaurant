@@ -543,10 +543,7 @@ body.no-scroll {
   grid-row: 2/3;
 }
 .about__content .btn {
-  color: #fff;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .menu {
