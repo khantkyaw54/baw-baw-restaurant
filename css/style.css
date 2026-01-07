@@ -1022,15 +1022,23 @@ body.no-scroll {
 .menu__mainvisual {
   padding: 15.625rem 0 9.375rem;
   background: url(../images/menu-image02.webp) no-repeat 40% center/cover;
-  background-attachment: scroll;
   position: relative;
-  z-index: 998;
+  z-index: 1;
+}
+.menu__mainvisual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
 }
 .menu__mainvisual__inner {
   max-width: 1000px;
   width: 86%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .icon {

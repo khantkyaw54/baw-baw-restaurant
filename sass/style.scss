@@ -1177,16 +1177,23 @@ body.no-scroll {
 .menu__mainvisual {
     padding: rem(250) 0 rem(150);
     background: url(../images/menu-image02.webp) no-repeat 40% center / cover;
-    background-attachment: scroll;
     position: relative;
-    z-index: 998;
+    z-index: 1;
+
+    // dark overlay
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35); // ← adjust darkness here
+        z-index: -1;
+    }
 
     &__inner {
         @include inner();
-
+        position: relative;
+        z-index: 2; // keep text above overlay
     }
-
-
 }
 
 // ================================================================
