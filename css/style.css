@@ -972,7 +972,8 @@ body.no-scroll {
   font-size: 1.125rem;
 }
 .footer__sns-icon {
-  font-size: 2.1875rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: 0 0.75rem;
   transition: transform 0.3s ease;
 }
@@ -1034,6 +1035,7 @@ body.no-scroll {
   background-position: center;
   background-size: cover;
   position: relative;
+  z-index: 1;
 }
 .menu__mainvisual::before {
   content: "";
