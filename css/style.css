@@ -179,7 +179,7 @@ h1 {
 }
 
 /* ================================
-   Professional Dropdown Menu
+Dropdown Menu
 ================================ */
 .dropdown {
   display: none;
@@ -257,7 +257,7 @@ h1 {
 }
 .gnav {
   /* ===========================
-     MOBILE NAV (default)
+     MOBILE NAV
   ============================ */
   position: fixed;
   top: 0;
@@ -311,6 +311,7 @@ h1 {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.3s ease;
+  border-radius: 50px;
 }
 .gnav__item:hover::before {
   transform: scaleY(1);
@@ -556,14 +557,14 @@ body.no-scroll {
 }
 
 .menu {
-  padding: 5rem 0 13.125rem 0;
+  padding: 5rem 0 11.25rem 0;
   background-color: #f7f4e5;
   background-color: #640125;
   position: relative;
 }
 @media (width >= 740px) {
   .menu {
-    padding-bottom: 17.5rem;
+    padding-bottom: 21.875rem;
   }
 }
 .menu__title {
@@ -727,9 +728,14 @@ body.no-scroll {
 }
 
 .news {
-  padding: 11.25rem 0 23.75rem 0;
+  padding: 11.25rem 0 13.125rem 0;
   position: relative;
   color: #FFF;
+}
+@media (width >= 740px) {
+  .news {
+    padding-bottom: 21.875rem;
+  }
 }
 .news__background {
   position: absolute;

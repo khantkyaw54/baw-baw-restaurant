@@ -349,7 +349,7 @@ h1 {
 }
 
 /* ================================
-   Professional Dropdown Menu
+Dropdown Menu
 ================================ */
 
 .dropdown {
@@ -450,7 +450,7 @@ h1 {
 .gnav {
 
     /* ===========================
-       MOBILE NAV (default)
+       MOBILE NAV
     ============================ */
 
     position: fixed;
@@ -509,6 +509,7 @@ h1 {
             transform: scaleY(0);
             transform-origin: bottom;
             transition: transform 0.3s ease;
+            border-radius: 50px;
         }
 
         &:hover::before {
@@ -753,13 +754,13 @@ body.no-scroll {
 // menu
 // =================================================================
 .menu {
-    padding: rem(80) 0 rem(210) 0;
+    padding: rem(80) 0 rem(180) 0;
     background-color: $color-base;
     background-color: $color-main;
     position: relative;
 
     @include mq(desktop) {
-        padding-bottom: rem(280)
+        padding-bottom: rem(350)
     }
 
     &__title {
@@ -879,9 +880,13 @@ body.no-scroll {
 // =================================================================
 
 .news {
-    padding: rem(180) 0 rem(380) 0;
+    padding: rem(180) 0 rem(210) 0;
     position: relative;
     color: #FFF;
+
+    @include mq(desktop) {
+        padding-bottom: rem(350)
+    }
 
     &__background {
         position: absolute;
